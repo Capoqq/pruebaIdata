@@ -1,0 +1,43 @@
+<div class="container pt-5 pb-5">
+    <button [routerLink]="['']" class="btn-salir w-100" style="max-width: 200px;">
+        Salir
+    </button>
+    <h1 class="pacifico text-center fz-84">
+        Esta es la lista de usuarios disponibles
+    </h1>
+    <div *ngIf="lista" class="list-group mt-5">
+        <ul class="list-group">
+
+            <li *ngFor="let usuarios of lista" [routerLink]="['/usuario',usuarios.id]" class="list-group-item  list-group-item-action" >
+                <div class="card d-flex flex-wrap justify-content-center justify-content-sm-center justify-content-xl-start justify-content-lg-start justify-content-md-start" style="flex-direction: row;">
+
+                    <div class="d-flex justify-content-center">
+                        <img [src]="usuarios.avatar" style="max-width: 200px;" class="card-img-top" alt="">
+                    </div>
+                    <div class="d-flex justify-content-xl-center flex-wrap align-items-center">
+
+                        <p class="card-text mx-5">
+                           <span class="pacifico">Email:</span>  <br> <span class="color-principal">{{usuarios.email}}</span> 
+                        </p>
+                        <p class="card-text mx-5">
+                            <span class="pacifico">Nombre</span> <br> <span class="color-principal"> {{usuarios.first_name}}</span> 
+                        </p>
+                        <p class="card-text mx-5">
+                            <span class="pacifico">Apellido</span> <br> <span class="color-principal">{{usuarios.last_name}}</span> 
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="d-flex mt-4">
+        <button class="btn btn-primary mx-4" (click)="siguiente(1)" >
+            1
+        </button>
+        <button class="btn btn-primary mx-4" (click)="siguiente(2)" >
+            2
+        </button>
+        
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container-fluid vh-100">
+    <div class="row h-100 d-flex ">
+        <div class="col-xl-7 col-lg-6 img-banner pt-96 pl-83 d-xl-flex d-lg-flex d-md-none d-sm-non d-none">
+            <div class="d-flex flex-column">
+
+                <h1 class="text-principal color-principal mb-4">
+                    Bienvenido
+                </h1>
+                <p class="fz-34 color-principal">
+                    A <span class="pacifico">Contáctame</span> nuestra plataforma, donde
+                </p>
+                <p class="fz-34  color-principal" style="max-width: 600px;">
+                 podrás tener acceso a todos tus
+                </p>
+                <p class="fz-34 color-principal">
+
+                    amigos con solo un clic.
+                </p>
+            </div>
+
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="container pt-99">
+                <div class="d-flex align-items-center mb-60 justify-content-center">
+
+                    <img src="../../../assets/img/Video_Chat_2_.svg" style="max-width: 170px;" class="w-100" alt="">
+                </div>
+                <p class="pacifico fz-84 text-center">
+                    Contáctame 
+                </p>
+                <div class="w-100 d-flex justify-content-center align-items-center">
+
+                    <form [formGroup]="formulario" style="max-width: 530px;" class="mt-80 w-100">
+                        <div class="input-group mb-3 d-flex flex-column w-100 position-relative">
+                            <span class="color-principal position-absolute" style="z-index: 1000;background-color: white;left: 18px;top: -10px;font-weight: bold;">USUARIO</span>
+                            <input type="text" class="form-control input-login w-100" formControlName="usuario" aria-label="Username" aria-describedby="basic-addon1">
+                          </div> 
+                          <div class="input-group mb-3 mb-3 d-flex flex-column w-100">
+                            <span class="color-principal  position-absolute" style="z-index: 1000;background-color: white;left: 18px;top: -10px;font-weight: bold;">CONTRASEÑA</span>
+                            <input type="password" class="form-control input-login w-100" formControlName="password" aria-label="Username" aria-describedby="basic-addon1">
+                          </div> 
+                    </form> 
+                </div>
+                <div class="w-100 d-flex justify-content-end  mb-90" style="max-width: 617px;">
+
+                    <a href="" class="color-principal" style="text-decoration: underline;font-size: 20px;text-align: end;">Olvide mi contraseña</a>
+                </div>
+              
+            </div>
+            <div class="w-100 d-flex justify-content-center container flex-column align-items-center" >
+
+                <button (click)="redirigir()" [disabled]="!formulario.valid" class="button-login btn w-100 mb-100" style="max-width: 530px;">
+                    INGRESAR 
+                </button>
+                <p class="color-principal text-center mb-3" style="font-size:20px;">
+                    Siguenos en nuestras redes sociales 
+                </p>
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                        <img src="../../../assets/img/linkedin.svg" class="mx-2" alt="">
+                        <img src="../../../assets/img/instagram.svg" class="mx-2" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
